@@ -1,0 +1,123 @@
+{
+	"Begin checkout event": {
+		"prefix": "gaxevntbchkout",
+		"body": [
+			"gtag('event', 'begin_checkout');"
+		],
+		"description": "Fires a Google Analytics Event with an action of 'begin_checkout', a category of 'ecommerce'."
+	},
+	"Login event": {
+		"prefix": "gaxevntlogin",
+		"body": [
+			"gtag('event', 'login', { method : 'sample-login-method' });"
+		],
+		"description": "Fires a Google Analytics Event with an action of 'login', a category of 'engagement', and a label set to what you specify."
+	},
+	"Search term event": {
+		"prefix": "gaxevntsearch",
+		"body": [
+			"gtag('event', 'search', { search_term : 'sample-search-term' });"
+		],
+		"description": "Fires a Google Analytics Event with an action of 'search', a category of 'engagement', and a search term set to what you specify."
+	},
+	"Anonymize and send Google Analytics events": {
+		"prefix": "gaxevntanonip",
+		"body": [
+			"gtag('event', 'sample-action', { 'anonymize_ip': true });"
+		],
+		"description": "Sends Google Analytics Events on a web page, events that appear in the Google Analytics Event reports. Configured to only send mandatory action. Optional content removed. IP anonymized."
+	},
+	"App or Screen tracking": {
+		"prefix": "gaxevntvtrack",
+		"body": [
+			"gtag('event', 'screen_view', {",
+			"  'app_name': 'sample-app-name$1',",
+			"  'screen_name' : 'sample-screen-name$2'",
+			"});"
+		],
+		"description": "Track specific screen views in Google Analytics."
+	},
+	"Send custom dimensions": {
+		"prefix": "gaxevntdim",
+		"body": [
+			"gtag('event', 'sample-event-name$1', {'sample-dimension-name$2': sample-dimension-value$3 });"
+		],
+		"description": "Sends the custom dimension to Google Analytics."
+	},
+	"Send custom metric": {
+		"prefix": "gaxevntmetric",
+		"body": [
+			"gtag('event', 'sample-event-name$1', {'sample-metric-name$2': sample-metric-value$3 });"
+		],
+		"description": "Sends the custom metric to Google Analytics."
+	},
+	"Track exceptions": {
+		"prefix": "gaxevntex",
+		"body": [
+			"gtag('event', 'exception', {",
+			"  'description': 'sample-error-description$1',",
+			"  'fatal': false$2",
+			"});"
+		],
+		"description": "Send exceptions to Google Analytics."
+	},
+	"Send non-interaction event": {
+		"prefix": "gaxevntni",
+		"body": [
+			"gtag('event', 'sample-action$1', {",
+			"  'event_category': 'sample-category$2',",
+			"  'event_label': 'sample-label$3',",
+			"  'non_interaction': true",
+			"});"
+		],
+		"description": "Sends a non-interaction event on a web page, events that appear in the Google Analytics Event reports."
+	},
+	"Send Google Analytics Events - Short version": {
+		"prefix": "gaxevnt",
+		"body": [
+			"gtag('event', 'sample-action$1', {",
+			"  'event_category': 'sample-category$2',",
+			"  'event_label': 'sample-label$3',",
+			"});"
+		],
+		"description": "Sends Google Analytics Events on a web page, events that appear in the Google Analytics Event reports. This snippet omits value."
+	},
+	"Send Google Analytics Events - Only action": {
+		"prefix": "gaxevntaction",
+		"body": [
+			"gtag('event', 'sample-action$1');"
+		],
+		"description": "Sends Google Analytics Events on a web page, events that appear in the Google Analytics Event reports. Configured to only send mandatory action. Optional content removed."
+	},
+	"Track user timing": {
+		"prefix": "gaxevntutime",
+		"body": [
+			"gtag('event', 'timing_complete', {",
+			"  'name' : 'load',",
+			"  'value' : sample-load-time$1",
+			"});"
+		],
+		"description": "Send user timing information to Google Analytics."
+	},
+	"Send Google Analytics Events - Full version": {
+		"prefix": "gaxevntfull",
+		"body": [
+			"gtag('event', 'sample-action$1', {",
+			"  'event_category': 'sample-category$2',",
+			"  'event_label': 'sample-label$3',",
+			"  'value': 'sample-value$4',",
+			"});"
+		],
+		"description": "Sends Google Analytics Events on a web page, events that appear in the Google Analytics Event reports."
+	},
+	"Set persistent values": {
+		"prefix": "gaxset",
+		"body": [
+			"gtag('set', {",
+			"  'sample-parameter1$1': 'sample-value1$2',",
+			"  'sample-parameter2$3': 'sample-value2$4'", 
+			"});"
+		],
+		"description": "Set values that will be sent with every event for a web page."
+	}
+}

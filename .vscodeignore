@@ -1,0 +1,9 @@
+demos/**
+node_modules/**
+tests/**
+images/**
+.vscode/**
+.gitignore
+.vsix 
+test-results.xml
+lgtm.yml
